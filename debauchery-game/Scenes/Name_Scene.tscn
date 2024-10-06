@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://uqumauuheavw"]
+
+[ext_resource type="Script" path="res://Code/Name_Field.gd" id="1_groro"]
+[ext_resource type="FontFile" uid="uid://wwy6h3mwrafb" path="res://Textures/Font/Poppins-SemiBold.ttf" id="1_pnru2"]
+
+[node name="NameScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 280.0
+offset_right = 845.0
+offset_bottom = 400.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_pnru2")
+theme_override_font_sizes/font_size = 32
+placeholder_text = "Name"
+alignment = 1
+max_length = 24
+flat = true
+caret_blink = true
+script = ExtResource("1_groro")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 160.0
+offset_right = 735.0
+offset_bottom = 206.0
+theme_override_fonts/normal_font = ExtResource("1_pnru2")
+theme_override_font_sizes/normal_font_size = 32
+text = "What's Your Name?"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 509.0
+offset_top = 480.0
+offset_right = 643.0
+offset_bottom = 556.0
+theme_override_colors/icon_hover_color = Color(0.133196, 0.133196, 0.133196, 1)
+theme_override_fonts/font = ExtResource("1_pnru2")
+theme_override_font_sizes/font_size = 48
+text = "Done"
