@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cdsgbvx03ycf6"]
 
-[ext_resource type="Script" path="res://Code/Character_Movement.gd" id="1_qmnno"]
+[ext_resource type="Script" path="res://Code/Test_Scene_Code/Character_Movement.gd" id="1_qmnno"]
 [ext_resource type="Texture2D" uid="uid://cogtbfbblacl5" path="res://Textures/Character/icon.svg" id="2_d4ijf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oegf2"]
