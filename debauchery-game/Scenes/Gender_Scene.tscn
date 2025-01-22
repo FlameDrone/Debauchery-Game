@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dwxpx2d0fsxtp"]
 
-[ext_resource type="FontFile" uid="uid://wwy6h3mwrafb" path="res://Textures/Font/Test_Font.ttf" id="1_xvd3i"]
+[ext_resource type="FontFile" uid="uid://dhwxp6vbauegw" path="res://Textures/Font/VCR_OSD_MONO.ttf" id="1_0j8sa"]
 [ext_resource type="Script" path="res://Code/Gender_Scene_Code/Choice.gd" id="2_wwnj5"]
 
 [node name="GenderScene" type="Control"]
@@ -23,7 +23,7 @@ offset_left = 391.0
 offset_top = 50.0
 offset_right = 761.0
 offset_bottom = 110.0
-theme_override_fonts/normal_font = ExtResource("1_xvd3i")
+theme_override_fonts/normal_font = ExtResource("1_0j8sa")
 theme_override_font_sizes/normal_font_size = 32
 text = "What Gender are you?"
 
@@ -33,7 +33,7 @@ offset_left = 426.0
 offset_top = 250.0
 offset_right = 726.0
 offset_bottom = 310.0
-theme_override_fonts/font = ExtResource("1_xvd3i")
+theme_override_fonts/font = ExtResource("1_0j8sa")
 theme_override_font_sizes/font_size = 36
 text = "Male"
 script = ExtResource("2_wwnj5")
@@ -44,7 +44,7 @@ offset_left = 426.0
 offset_top = 350.0
 offset_right = 726.0
 offset_bottom = 410.0
-theme_override_fonts/font = ExtResource("1_xvd3i")
+theme_override_fonts/font = ExtResource("1_0j8sa")
 theme_override_font_sizes/font_size = 36
 text = "Female"
 script = ExtResource("2_wwnj5")
@@ -55,7 +55,7 @@ offset_left = 426.0
 offset_top = 450.0
 offset_right = 726.0
 offset_bottom = 510.0
-theme_override_fonts/font = ExtResource("1_xvd3i")
+theme_override_fonts/font = ExtResource("1_0j8sa")
 theme_override_font_sizes/font_size = 36
 text = "Other"
 script = ExtResource("2_wwnj5")

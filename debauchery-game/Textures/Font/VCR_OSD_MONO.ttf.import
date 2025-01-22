@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://wwy6h3mwrafb"
-path="res://.godot/imported/Test_Font.ttf-f30c6caf4a78608f1231e0025316c5bf.fontdata"
+uid="uid://dhwxp6vbauegw"
+path="res://.godot/imported/VCR_OSD_MONO.ttf-ade2e3c0f0222bc2e64406ced0056c9b.fontdata"
 
 [deps]
 
-source_file="res://Textures/Font/Test_Font.ttf"
-dest_files=["res://.godot/imported/Test_Font.ttf-f30c6caf4a78608f1231e0025316c5bf.fontdata"]
+source_file="res://Textures/Font/VCR_OSD_MONO.ttf"
+dest_files=["res://.godot/imported/VCR_OSD_MONO.ttf-ade2e3c0f0222bc2e64406ced0056c9b.fontdata"]
 
 [params]
 
@@ -28,13 +28,7 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "New Configuration",
-"size": Vector2i(16, 0),
-"variation_embolden": 0.0
-}]
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}

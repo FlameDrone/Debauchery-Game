@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://741k2rehgup7"]
 
-[ext_resource type="FontFile" uid="uid://wwy6h3mwrafb" path="res://Textures/Font/Test_Font.ttf" id="1_l1v8j"]
+[ext_resource type="FontFile" uid="uid://dhwxp6vbauegw" path="res://Textures/Font/VCR_OSD_MONO.ttf" id="1_bv036"]
 [ext_resource type="Script" path="res://Code/Incel_Name_Code/Okay.gd" id="2_ej7es"]
 
 [node name="IncelNameScene" type="Control"]
@@ -18,11 +18,12 @@ offset_bottom = 648.0
 color = Color(0.054902, 0.054902, 0.054902, 1)
 
 [node name="Incel_Text" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = 166.0
 offset_top = 196.0
 offset_right = 986.0
 offset_bottom = 251.0
-theme_override_fonts/normal_font = ExtResource("1_l1v8j")
+theme_override_fonts/normal_font = ExtResource("1_bv036")
 theme_override_font_sizes/normal_font_size = 36
 text = "I don't like that Name, I'll just call you \"Incel\"."
 
@@ -32,7 +33,7 @@ offset_left = 213.0
 offset_top = 400.0
 offset_right = 513.0
 offset_bottom = 460.0
-theme_override_fonts/font = ExtResource("1_l1v8j")
+theme_override_fonts/font = ExtResource("1_bv036")
 theme_override_font_sizes/font_size = 36
 text = "OK"
 script = ExtResource("2_ej7es")
@@ -43,7 +44,7 @@ offset_left = 639.0
 offset_top = 400.0
 offset_right = 939.0
 offset_bottom = 460.0
-theme_override_fonts/font = ExtResource("1_l1v8j")
+theme_override_fonts/font = ExtResource("1_bv036")
 theme_override_font_sizes/font_size = 36
 text = "Okay"
 script = ExtResource("2_ej7es")

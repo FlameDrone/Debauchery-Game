@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dqnldvvimmg61"]
 
-[ext_resource type="FontFile" uid="uid://wwy6h3mwrafb" path="res://Textures/Font/Test_Font.ttf" id="1_2ulk4"]
+[ext_resource type="FontFile" uid="uid://dhwxp6vbauegw" path="res://Textures/Font/VCR_OSD_MONO.ttf" id="1_xs87d"]
 [ext_resource type="Script" path="res://Code/Main_Scene_Code/Start.gd" id="2_n0byq"]
 
 [node name="MainScreenScene" type="Control"]
@@ -23,7 +23,7 @@ offset_left = 333.0
 offset_top = 50.0
 offset_right = 818.0
 offset_bottom = 122.0
-theme_override_fonts/normal_font = ExtResource("1_2ulk4")
+theme_override_fonts/normal_font = ExtResource("1_xs87d")
 theme_override_font_sizes/normal_font_size = 50
 text = "Debauchery Game"
 
@@ -33,7 +33,7 @@ offset_left = 376.0
 offset_top = 274.0
 offset_right = 776.0
 offset_bottom = 374.0
-theme_override_fonts/font = ExtResource("1_2ulk4")
+theme_override_fonts/font = ExtResource("1_xs87d")
 theme_override_font_sizes/font_size = 50
 text = "Start"
 script = ExtResource("2_n0byq")
