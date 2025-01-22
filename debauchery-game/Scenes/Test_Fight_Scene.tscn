@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://0dsw0dj5x8as"]
+
+[ext_resource type="Script" path="res://Code/Test_Fight_Scene_Code/Test_Fight_Scene_Load.gd" id="1_bucxv"]
+[ext_resource type="Script" path="res://Code/Test_Fight_Scene_Code/KMS_Button.gd" id="1_u38xo"]
+[ext_resource type="FontFile" uid="uid://wwy6h3mwrafb" path="res://Textures/Font/Test_Font.ttf" id="2_p8cvk"]
+[ext_resource type="Script" path="res://Code/Test_Fight_Scene_Code/Attack_Button.gd" id="4_ivldg"]
+
+[node name="TestFightScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bucxv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.117647, 0.117647, 0.117647, 1)
+
+[node name="Name_Enemy" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 1152.0
+offset_bottom = 149.0
+theme_override_fonts/normal_font = ExtResource("2_p8cvk")
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "[center] Text [/center] "
+fit_content = true
+
+[node name="KMS_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 489.0
+offset_right = 656.0
+offset_bottom = 559.0
+theme_override_fonts/font = ExtResource("2_p8cvk")
+theme_override_font_sizes/font_size = 40
+text = "KMS!"
+script = ExtResource("1_u38xo")
+
+[node name="Attack_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 389.0
+offset_right = 656.0
+offset_bottom = 459.0
+theme_override_fonts/font = ExtResource("2_p8cvk")
+theme_override_font_sizes/font_size = 40
+text = "Attack!"
+script = ExtResource("4_ivldg")
+
+[connection signal="pressed" from="KMS_Button" to="KMS_Button" method="_on_pressed"]
+[connection signal="pressed" from="Attack_Button" to="Attack_Button" method="_on_pressed"]

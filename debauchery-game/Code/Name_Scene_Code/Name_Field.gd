@@ -7,11 +7,11 @@ func _ready() -> void:
 	grab_focus()
 
 # When Pressing Enter
-# Changes the Scene (Currently to the test_scene) (same code as in Submit.gd)
-func _on_text_submitted(new_text: String) -> void:
+# Changes the Scene (Currently to the Incel_Name_Scene) (same code as in Name_Field.gd)
+func _button_pressed():
 	var player_data = get_node("/root/PlayerData")
 	if player_data.player_name.length() > 0:
-		get_tree().change_scene_to_file("res://Scenes/Test_Scene.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Incel_Name_Scene.tscn")
 
 #When Input changes
 #Sets the Player-Name to the current input

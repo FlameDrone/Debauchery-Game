@@ -2,11 +2,14 @@ extends CharacterBody2D
 
 #	This is the Code for the Movement of the Player Character
 #	Its only Prototypic, so open to changes
-#	[Currently only working with Arrowkeys]
 #	
 #	Alright just testing if I managed to make github work properly :trol:
 
 const SPEED = 300.0
+
+func _ready() -> void:
+	self.position = FightData.player_coords
+	set_motion_mode(1)
 
 func _physics_process(_delta: float) -> void:
 	
@@ -23,6 +26,5 @@ func _physics_process(_delta: float) -> void:
 		velocity.y = up_down * SPEED
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
-	
-
+	velocity = velocity*velocity.normalized().abs()
 	move_and_slide()

@@ -1,19 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdsgbvx03ycf6"]
+[gd_scene load_steps=7 format=3 uid="uid://cdsgbvx03ycf6"]
 
 [ext_resource type="Script" path="res://Code/Test_Scene_Code/Character_Movement.gd" id="1_qmnno"]
 [ext_resource type="Texture2D" uid="uid://cmtkc4s3n5yee" path="res://Textures/Character/Mouse_girl.png" id="2_qexao"]
+[ext_resource type="Texture2D" uid="uid://dgr7cnmidujlb" path="res://Textures/Character/Dingus.webp" id="3_wm4j2"]
+[ext_resource type="Script" path="res://Code/Test_Scene_Code/Enemy.gd" id="3_x33rg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2x6al"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74v6e"]
+
 [node name="TestScene" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+
+[node name="Character" type="CharacterBody2D" parent="." groups=["Character_Group"]]
 script = ExtResource("1_qmnno")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="Character_Colison" type="CollisionShape2D" parent="Character"]
 scale = Vector2(5, 5.5)
 shape = SubResource("CapsuleShape2D_2x6al")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Character_Sprite" type="Sprite2D" parent="Character"]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_qexao")
+
+[node name="Test_Enemy" type="Area2D" parent="." groups=["Enemy_Group"]]
+position = Vector2(-600, 0)
+script = ExtResource("3_x33rg")
+
+[node name="Test_Enemy_Sprite" type="Sprite2D" parent="Test_Enemy"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_wm4j2")
+
+[node name="Test_Enemy_Colison" type="CollisionShape2D" parent="Test_Enemy"]
+position = Vector2(0, 8)
+scale = Vector2(5.5, 7)
+shape = SubResource("RectangleShape2D_74v6e")
+
+[connection signal="body_entered" from="Test_Enemy" to="Test_Enemy" method="_on_body_entered"]

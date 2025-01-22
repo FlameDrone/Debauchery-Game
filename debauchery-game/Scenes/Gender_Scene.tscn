@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwxpx2d0fsxtp"]
+
+[ext_resource type="FontFile" uid="uid://wwy6h3mwrafb" path="res://Textures/Font/Test_Font.ttf" id="1_xvd3i"]
+[ext_resource type="Script" path="res://Code/Gender_Scene_Code/Choice.gd" id="2_wwnj5"]
+
+[node name="GenderScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.054902, 0.054902, 0.054902, 1)
+
+[node name="Gender_Question" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 50.0
+offset_right = 761.0
+offset_bottom = 110.0
+theme_override_fonts/normal_font = ExtResource("1_xvd3i")
+theme_override_font_sizes/normal_font_size = 32
+text = "What Gender are you?"
+
+[node name="Male_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 250.0
+offset_right = 726.0
+offset_bottom = 310.0
+theme_override_fonts/font = ExtResource("1_xvd3i")
+theme_override_font_sizes/font_size = 36
+text = "Male"
+script = ExtResource("2_wwnj5")
+
+[node name="Femlae_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 350.0
+offset_right = 726.0
+offset_bottom = 410.0
+theme_override_fonts/font = ExtResource("1_xvd3i")
+theme_override_font_sizes/font_size = 36
+text = "Female"
+script = ExtResource("2_wwnj5")
+
+[node name="Other_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 450.0
+offset_right = 726.0
+offset_bottom = 510.0
+theme_override_fonts/font = ExtResource("1_xvd3i")
+theme_override_font_sizes/font_size = 36
+text = "Other"
+script = ExtResource("2_wwnj5")
