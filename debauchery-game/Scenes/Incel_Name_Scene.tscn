@@ -19,10 +19,10 @@ color = Color(0.054902, 0.054902, 0.054902, 1)
 
 [node name="Incel_Text" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 209.0
-offset_top = 191.0
-offset_right = 944.0
-offset_bottom = 296.0
+offset_left = 274.0
+offset_top = 150.0
+offset_right = 874.0
+offset_bottom = 250.0
 theme_override_fonts/normal_font = ExtResource("1_bv036")
 theme_override_font_sizes/normal_font_size = 36
 text = "I don't like that name, I'll just call you \"Incel\"."

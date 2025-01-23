@@ -12,5 +12,5 @@ func _process(delta: float) -> void:
 
 # When Attack Button is pressed Enemy dies and we come back to our test Scene
 func _on_pressed() -> void:
-	FightData.enemy_lost = true
+	FightData.kill_enemy(FightData.enemy_key)
 	get_tree().change_scene_to_file("res://Scenes/Test_Scene.tscn")

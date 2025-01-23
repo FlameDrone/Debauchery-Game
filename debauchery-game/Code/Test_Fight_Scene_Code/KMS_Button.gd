@@ -12,5 +12,6 @@ func _process(delta: float) -> void:
 
 #Kills yourself
 func _on_pressed() -> void:
-	FightData.reset_fight_information();
+	FightData.reset_fight_information()
+	FightData.clear_enemy_dict()
 	get_tree().change_scene_to_file("res://Scenes/Main_Screen_Scene.tscn")

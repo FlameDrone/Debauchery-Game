@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cogtbfbblacl5"
-path="res://.godot/imported/icon.svg-1713dcf7d798170c9a2688a71889e70d.ctex"
+uid="uid://clglgq4upt5a6"
+path="res://.godot/imported/Mouse_girl_left_walking.png-691b6f8e5922a386c705ce57162011b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Character/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-1713dcf7d798170c9a2688a71889e70d.ctex"]
+source_file="res://Textures/Character/Mouse_girl_left_walking.png"
+dest_files=["res://.godot/imported/Mouse_girl_left_walking.png-691b6f8e5922a386c705ce57162011b7.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

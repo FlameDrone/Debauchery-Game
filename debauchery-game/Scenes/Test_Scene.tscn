@@ -1,11 +1,65 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdsgbvx03ycf6"]
+[gd_scene load_steps=13 format=3 uid="uid://cdsgbvx03ycf6"]
 
 [ext_resource type="Script" path="res://Code/Test_Scene_Code/Character_Movement.gd" id="1_qmnno"]
+[ext_resource type="Texture2D" uid="uid://btkqgor7tbnml" path="res://Textures/Character/Mouse_girl_right.webp" id="2_lad7q"]
 [ext_resource type="Texture2D" uid="uid://cmtkc4s3n5yee" path="res://Textures/Character/Mouse_girl.png" id="2_qexao"]
-[ext_resource type="Texture2D" uid="uid://dgr7cnmidujlb" path="res://Textures/Character/Dingus.webp" id="3_wm4j2"]
+[ext_resource type="Texture2D" uid="uid://dky7wd01hnqyq" path="res://Textures/Character/Mouse_girl_left.png" id="3_ai0do"]
+[ext_resource type="Texture2D" uid="uid://dgr7cnmidujlb" path="res://Textures/Enemy/Dingus.webp" id="3_wm4j2"]
 [ext_resource type="Script" path="res://Code/Test_Scene_Code/Enemy.gd" id="3_x33rg"]
+[ext_resource type="Texture2D" uid="uid://cnxo1nwwe8shq" path="res://Textures/Character/Mouse_girl_right_walking.webp" id="3_ycyvy"]
+[ext_resource type="Texture2D" uid="uid://clglgq4upt5a6" path="res://Textures/Character/Mouse_girl_left_walking.png" id="4_js72m"]
+[ext_resource type="Texture2D" uid="uid://bhvcc80w0sg0f" path="res://Textures/Character/Mouse_girl_back.webp" id="7_o56u0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2x6al"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mxlul"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qexao")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qexao")
+}],
+"loop": true,
+"name": &"walking_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ai0do")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_js72m")
+}],
+"loop": true,
+"name": &"walking_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lad7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ycyvy")
+}],
+"loop": true,
+"name": &"walking_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_o56u0")
+}],
+"loop": true,
+"name": &"walking_up",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74v6e"]
 
@@ -21,9 +75,10 @@ script = ExtResource("1_qmnno")
 scale = Vector2(5, 5.5)
 shape = SubResource("CapsuleShape2D_2x6al")
 
-[node name="Character_Sprite" type="Sprite2D" parent="Character"]
+[node name="CharacterSpriteAnimation" type="AnimatedSprite2D" parent="Character"]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_qexao")
+sprite_frames = SubResource("SpriteFrames_mxlul")
+animation = &"walking_down"
 
 [node name="Test_Enemy" type="Area2D" parent="." groups=["Enemy_Group"]]
 position = Vector2(-600, 0)
@@ -38,4 +93,18 @@ position = Vector2(0, 8)
 scale = Vector2(5.5, 7)
 shape = SubResource("RectangleShape2D_74v6e")
 
+[node name="Test_Enemy 2" type="Area2D" parent="." groups=["Enemy_Group"]]
+position = Vector2(600, 0)
+script = ExtResource("3_x33rg")
+
+[node name="Test_Enemy_Sprite" type="Sprite2D" parent="Test_Enemy 2"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_wm4j2")
+
+[node name="Test_Enemy_Colison" type="CollisionShape2D" parent="Test_Enemy 2"]
+position = Vector2(0, 8)
+scale = Vector2(5.5, 7)
+shape = SubResource("RectangleShape2D_74v6e")
+
 [connection signal="body_entered" from="Test_Enemy" to="Test_Enemy" method="_on_body_entered"]
+[connection signal="body_entered" from="Test_Enemy 2" to="Test_Enemy 2" method="_on_body_entered"]

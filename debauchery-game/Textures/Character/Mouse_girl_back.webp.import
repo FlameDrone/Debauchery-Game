@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgr7cnmidujlb"
-path="res://.godot/imported/Dingus.webp-6b1e95638e2944c8ed31f434f1cce04d.ctex"
+uid="uid://bhvcc80w0sg0f"
+path="res://.godot/imported/Mouse_girl_back.webp-30ce7f4933942602d3a35b1cbc41fb91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Character/Dingus.webp"
-dest_files=["res://.godot/imported/Dingus.webp-6b1e95638e2944c8ed31f434f1cce04d.ctex"]
+source_file="res://Textures/Character/Mouse_girl_back.webp"
+dest_files=["res://.godot/imported/Mouse_girl_back.webp-30ce7f4933942602d3a35b1cbc41fb91.ctex"]
 
 [params]
 
