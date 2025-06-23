@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://741k2rehgup7"]
 
 [ext_resource type="FontFile" uid="uid://dhwxp6vbauegw" path="res://Textures/Font/VCR_OSD_MONO.ttf" id="1_bv036"]
-[ext_resource type="Script" path="res://Code/Incel_Name_Code/Okay.gd" id="2_ej7es"]
+[ext_resource type="Script" uid="uid://blfugpokp115y" path="res://Code/Incel_Name_Code/Okay.gd" id="2_ej7es"]
 
 [node name="IncelNameScene" type="Control"]
 layout_mode = 3

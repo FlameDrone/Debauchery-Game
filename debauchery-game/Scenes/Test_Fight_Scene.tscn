@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://0dsw0dj5x8as"]
 
-[ext_resource type="Script" path="res://Code/Test_Fight_Scene_Code/Test_Fight_Scene_Load.gd" id="1_bucxv"]
-[ext_resource type="Script" path="res://Code/Test_Fight_Scene_Code/KMS_Button.gd" id="1_u38xo"]
+[ext_resource type="Script" uid="uid://jiikwj0nkdsv" path="res://Code/Test_Fight_Scene_Code/Test_Fight_Scene_Load.gd" id="1_bucxv"]
+[ext_resource type="Script" uid="uid://dpkv2y1jobbnm" path="res://Code/Test_Fight_Scene_Code/KMS_Button.gd" id="1_u38xo"]
 [ext_resource type="FontFile" uid="uid://dhwxp6vbauegw" path="res://Textures/Font/VCR_OSD_MONO.ttf" id="2_8pqst"]
-[ext_resource type="Script" path="res://Code/Test_Fight_Scene_Code/Attack_Button.gd" id="4_ivldg"]
+[ext_resource type="Script" uid="uid://bbocompr01lf1" path="res://Code/Test_Fight_Scene_Code/Attack_Button.gd" id="4_ivldg"]
 
 [node name="TestFightScene" type="Control"]
 layout_mode = 3

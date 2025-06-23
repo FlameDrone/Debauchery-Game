@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dqnldvvimmg61"]
 
 [ext_resource type="FontFile" uid="uid://dhwxp6vbauegw" path="res://Textures/Font/VCR_OSD_MONO.ttf" id="1_xs87d"]
-[ext_resource type="Script" path="res://Code/Main_Scene_Code/Start.gd" id="2_n0byq"]
+[ext_resource type="Script" uid="uid://dpd38efkrapy1" path="res://Code/Main_Scene_Code/Start.gd" id="2_n0byq"]
 
 [node name="MainScreenScene" type="Control"]
 layout_mode = 3

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dwxpx2d0fsxtp"]
 
 [ext_resource type="FontFile" uid="uid://dhwxp6vbauegw" path="res://Textures/Font/VCR_OSD_MONO.ttf" id="1_0j8sa"]
-[ext_resource type="Script" path="res://Code/Gender_Scene_Code/Choice.gd" id="2_wwnj5"]
+[ext_resource type="Script" uid="uid://bvu352ue6r3qe" path="res://Code/Gender_Scene_Code/Choice.gd" id="2_wwnj5"]
 
 [node name="GenderScene" type="Control"]
 layout_mode = 3

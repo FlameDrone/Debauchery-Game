@@ -12,13 +12,14 @@ config_version=5
 
 config/name="Debauchery-Game"
 run/main_scene="res://Scenes/Main_Screen_Scene.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://Textures/Character/icon.svg"
 
 [autoload]
 
 PlayerData="*res://Code/Global_Data/Player_Data.gd"
 FightData="*res://Code/Global_Data/Fight_Data.gd"
+State="*res://Code/Global_Data/State.gd"
 
 [global_group]
 
