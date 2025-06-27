@@ -12,5 +12,7 @@ func _process(delta: float) -> void:
 
 # When Attack Button is pressed Enemy dies and we come back to our test Scene
 func _on_pressed() -> void:
-	FightData.kill_enemy(FightData.enemy_key)
+	var defeated_state = State.get_from_database(FightData.enemy_node_name)
+	defeated_state["defeated"] = true
+	State.update_from_database(FightData.enemy_node_name, defeated_state)
 	get_tree().change_scene_to_file("res://Scenes/Test_Scene.tscn")

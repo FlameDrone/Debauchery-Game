@@ -11,7 +11,7 @@ const SPEED = 300.0
 
 func _ready() -> void:
 	self.position = FightData.player_coords
-	set_motion_mode(1)
+	set_motion_mode(MOTION_MODE_FLOATING)
 	animation_player.stop()
 	animation_player.play("idle")
 
