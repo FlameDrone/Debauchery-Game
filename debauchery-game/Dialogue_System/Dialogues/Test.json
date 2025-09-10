@@ -1,0 +1,7 @@
+{
+	"0" : [
+		{"name": "NPC", "text" : "This is a Test!"},
+		{"name": "NPC", "text" : "Oh! Hi {name}."},
+		{"name": "{name}", "text": "Hi."},
+	]
+}

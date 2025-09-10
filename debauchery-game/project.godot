@@ -20,11 +20,13 @@ config/icon="res://Textures/Character/icon.svg"
 PlayerData="*res://Code/Global_Data/Player_Data.gd"
 FightData="*res://Code/Global_Data/Fight_Data.gd"
 State="*res://Code/Global_Data/State.gd"
+DialogueBox="*res://Dialogue_System/DialogueBox.tscn"
 
 [global_group]
 
 Character_Group="Group of the Main Character"
 Enemy_Group="Enemy_Group"
+Interactive_Group=""
 
 [input]
 

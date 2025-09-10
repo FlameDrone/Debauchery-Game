@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cdsgbvx03ycf6"]
+[gd_scene load_steps=18 format=3 uid="uid://cdsgbvx03ycf6"]
 
 [ext_resource type="Script" uid="uid://njrw6755xv27" path="res://Code/Test_Scene_Code/Test_Scene_Load.gd" id="1_8c5ma"]
 [ext_resource type="Script" uid="uid://nv7m10ufcgqu" path="res://Code/Test_Scene_Code/Character_Movement.gd" id="1_qmnno"]
@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://cnxo1nwwe8shq" path="res://Textures/Character/Mouse_girl_right_walking.webp" id="3_ycyvy"]
 [ext_resource type="Texture2D" uid="uid://clglgq4upt5a6" path="res://Textures/Character/Mouse_girl_left_walking.png" id="4_js72m"]
 [ext_resource type="Texture2D" uid="uid://bhvcc80w0sg0f" path="res://Textures/Character/Mouse_girl_back.webp" id="7_o56u0"]
+[ext_resource type="Script" uid="uid://cbom1svxxagel" path="res://Code/Test_Scene_Code/Talk_NPC_Test_Script.gd" id="11_ofkpl"]
+[ext_resource type="Texture2D" uid="uid://dpqc5ghkotw6f" path="res://Textures/NPCs/CatThumbsUp.png" id="12_grcoo"]
+[ext_resource type="PackedScene" uid="uid://bivfk7qe1fyek" path="res://Dialogue_System/DialogueBox.tscn" id="13_tq75k"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2x6al"]
 
@@ -64,6 +67,9 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74v6e"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vrl3"]
+size = Vector2(1000, 1000)
+
 [node name="TestScene" type="Node2D"]
 script = ExtResource("1_8c5ma")
 
@@ -73,7 +79,7 @@ zoom = Vector2(0.5, 0.5)
 [node name="Character" type="CharacterBody2D" parent="." groups=["Character_Group"]]
 script = ExtResource("1_qmnno")
 
-[node name="Character_Colison" type="CollisionShape2D" parent="Character"]
+[node name="Character_Colison" type="CollisionShape2D" parent="Character" groups=["Character_Group"]]
 scale = Vector2(5, 5.5)
 shape = SubResource("CapsuleShape2D_2x6al")
 
@@ -108,5 +114,25 @@ position = Vector2(0, 8)
 scale = Vector2(5.5, 7)
 shape = SubResource("RectangleShape2D_74v6e")
 
+[node name="Talk_NPC_Test" type="Area2D" parent="." groups=["Interactive_Group"]]
+position = Vector2(0, 500)
+scale = Vector2(0.25, 0.25)
+collision_layer = 0
+script = ExtResource("11_ofkpl")
+
+[node name="Talk_NPC_Test_Sprite" type="Sprite2D" parent="Talk_NPC_Test" groups=["Interactive_Group"]]
+texture = ExtResource("12_grcoo")
+
+[node name="Talk_NPC_Test_Colison" type="CollisionShape2D" parent="Talk_NPC_Test"]
+shape = SubResource("RectangleShape2D_3vrl3")
+
+[node name="DialogueBox" parent="." instance=ExtResource("13_tq75k")]
+visible = false
+offset = Vector2(-1152, -648)
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, -1152, -648)
+
 [connection signal="body_entered" from="Test_Enemy" to="Test_Enemy" method="_on_body_entered"]
 [connection signal="body_entered" from="Test_Enemy 2" to="Test_Enemy 2" method="_on_body_entered"]
+[connection signal="body_entered" from="Talk_NPC_Test" to="Talk_NPC_Test" method="_on_body_entered"]
+[connection signal="body_exited" from="Talk_NPC_Test" to="Talk_NPC_Test" method="_on_body_exited"]

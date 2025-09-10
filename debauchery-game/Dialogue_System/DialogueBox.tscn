@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://bivfk7qe1fyek"]
+
+[ext_resource type="Script" uid="uid://bx04wllxcyq58" path="res://Dialogue_System/Dialogue_Script.gd" id="1_2gre6"]
+[ext_resource type="Texture2D" uid="uid://bkfyc2qn0y4tx" path="res://Textures/UI/dialogue_box.png" id="1_4548i"]
+
+[node name="DialogueBox" type="CanvasLayer"]
+script = ExtResource("1_2gre6")
+
+[node name="DialogueBackDrop" type="NinePatchRect" parent="."]
+offset_left = 40.0
+offset_top = 454.0
+offset_right = 1112.0
+offset_bottom = 627.0
+texture = ExtResource("1_4548i")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 6
+patch_margin_top = 26
+patch_margin_right = 6
+patch_margin_bottom = 26
+
+[node name="Name" type="RichTextLabel" parent="DialogueBackDrop"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.079
+anchor_bottom = 0.33
+offset_left = 12.0
+offset_top = 7.0
+offset_right = 91.992
+offset_bottom = -3.09
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 34
+text = "Name"
+fit_content = true
+
+[node name="Dialogue" type="RichTextLabel" parent="DialogueBackDrop"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 74.0
+offset_right = 1079.0
+offset_bottom = 162.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "Thinking..."
+fit_content = true
